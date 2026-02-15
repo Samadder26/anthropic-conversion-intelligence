@@ -127,7 +127,7 @@ def render(scored_df: pd.DataFrame, monthly_df: pd.DataFrame):
             margin=dict(l=60, r=60, t=30, b=30),
             showlegend=False,
         )
-        st.plotly_chart(fig_radar, width="stretch")
+        st.plotly_chart(fig_radar, use_container_width=True)
 
     with col_trend:
         st.markdown(section_header("12-Month Usage Trend"), unsafe_allow_html=True)
@@ -157,7 +157,7 @@ def render(scored_df: pd.DataFrame, monthly_df: pd.DataFrame):
                 xaxis=dict(gridcolor="#E2E8F0", zerolinecolor="#E2E8F0"),
                 legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0, font=dict(size=11)),
             )
-            st.plotly_chart(fig_trend, width="stretch")
+            st.plotly_chart(fig_trend, use_container_width=True)
         else:
             st.info("No monthly data available for this account.")
 
