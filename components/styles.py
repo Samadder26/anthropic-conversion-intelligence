@@ -270,19 +270,8 @@ GLOBAL_CSS = """
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
     /* ── Base Reset ── */
-    *:not(.material-symbols-rounded):not(.material-symbols-outlined):not(.material-symbols-sharp):not(.e-icons),
-    *::before, *::after {
+    *, *::before, *::after {
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
-    }
-    /* Preserve Streamlit's icon fonts */
-    .material-symbols-rounded {
-        font-family: 'Material Symbols Rounded' !important;
-    }
-    .material-symbols-outlined {
-        font-family: 'Material Symbols Outlined' !important;
-    }
-    .material-symbols-sharp {
-        font-family: 'Material Symbols Sharp' !important;
     }
 
     /* ── Background ── */
