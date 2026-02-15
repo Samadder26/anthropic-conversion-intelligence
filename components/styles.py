@@ -415,9 +415,6 @@ GLOBAL_CSS = """
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header[data-testid="stHeader"] {background: transparent;}
-    [data-testid="collapsedControl"] {display: none;}
-    [data-testid="stToolbar"] {display: none;}
-    .stDeployButton {display: none;}
 
     /* ── Card container class ── */
     .card {
