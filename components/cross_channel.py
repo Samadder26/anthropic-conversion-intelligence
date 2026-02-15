@@ -51,7 +51,7 @@ def render(scored_df: pd.DataFrame, monthly_df: pd.DataFrame):
             yaxis=dict(automargin=True, tickfont=dict(size=12)),
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0, font=dict(size=11)),
         )
-        st.plotly_chart(fig_bar, use_container_width=True)
+        st.plotly_chart(fig_bar, width="stretch")
 
     # ── Channel Distribution + Multi-channel Comparison ──
     with col_dist:
@@ -75,7 +75,7 @@ def render(scored_df: pd.DataFrame, monthly_df: pd.DataFrame):
             yaxis=dict(gridcolor="#E2E8F0", title=""),
             showlegend=False,
         )
-        st.plotly_chart(fig_dist, use_container_width=True)
+        st.plotly_chart(fig_dist, width="stretch")
 
         st.markdown('<div style="height:16px"></div>', unsafe_allow_html=True)
 
@@ -208,7 +208,7 @@ def render(scored_df: pd.DataFrame, monthly_df: pd.DataFrame):
                        range=[0, max_val]),
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0, font=dict(size=11)),
         )
-        st.plotly_chart(fig_scatter, use_container_width=True)
+        st.plotly_chart(fig_scatter, width="stretch")
     else:
         st.info("No hidden revenue opportunities detected with current data.")
 

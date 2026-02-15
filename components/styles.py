@@ -269,8 +269,13 @@ PLOTLY_LAYOUT = dict(
 GLOBAL_CSS = """
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-    /* ── Base Reset ── */
-    *, *::before, *::after {
+    /* ── Base Reset (exclude Material Symbols used by Streamlit internals) ── */
+    body, input, button, textarea, select,
+    h1, h2, h3, h4, h5, h6, p, li,
+    span:not(.material-symbols-rounded):not(.material-symbols-outlined):not(.material-symbols-sharp),
+    td, th, div, a, label,
+    .stMarkdown, .stRadio, .stSelectbox, .stMultiSelect, .stSlider,
+    [data-testid="stMetricValue"], [data-testid="stMetricLabel"] {
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
 

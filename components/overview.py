@@ -141,7 +141,7 @@ def render(scored_df: pd.DataFrame, monthly_df: pd.DataFrame):
                 showarrow=False,
             )],
         )
-        st.plotly_chart(fig_donut, use_container_width=True)
+        st.plotly_chart(fig_donut, width="stretch")
 
     st.markdown('<div style="height:28px"></div>', unsafe_allow_html=True)
 
@@ -216,4 +216,4 @@ def render(scored_df: pd.DataFrame, monthly_df: pd.DataFrame):
             ),
             xaxis=dict(gridcolor="#E2E8F0", zerolinecolor="#E2E8F0"),
         )
-        st.plotly_chart(fig_trend, use_container_width=True)
+        st.plotly_chart(fig_trend, width="stretch")

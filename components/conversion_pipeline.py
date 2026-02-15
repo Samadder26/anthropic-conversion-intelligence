@@ -87,7 +87,7 @@ def render(scored_df: pd.DataFrame):
         legend=dict(orientation="h", yanchor="bottom", y=1.05, xanchor="left", x=0, font=dict(size=11)),
         showlegend=True,
     )
-    st.plotly_chart(fig_hist, use_container_width=True)
+    st.plotly_chart(fig_hist, width="stretch")
 
     st.markdown('<div style="height:20px"></div>', unsafe_allow_html=True)
 
